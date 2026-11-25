@@ -55,7 +55,7 @@
   <p>Die folgenden Angaben werden ausschließlich lokal auf dem Gerät gespeichert, damit das Kind seinen Spielstand behält:</p>
   <ul>
     <li><strong>Benutzername</strong>, den das Kind selbst wählt.</li>
-    <li><strong>Passwort</strong> und <strong>Antwort auf die Sicherheitsfrage</strong> (Lieblingsfarbe). Beide werden nicht im Klartext gespeichert, sondern verschlüsselt (PBKDF2 mit Salt) und können nicht ausgelesen werden.</li>
+    <li><strong>Passwort</strong> und <strong>Antwort auf die Sicherheitsfrage</strong> (Lieblingsfarbe). Die App speichert lokal nur Prüfwerte, die sie mit PBKDF2 und einem zufälligen Salt je Eintrag berechnet. Wenn Sie die Sicherheitsfrage richtig beantworten, können Sie ein vergessenes Passwort durch ein neues ersetzen.</li>
     <li><strong>Auswahl „Junge“ oder „Mädchen“</strong>, nur um die Standardfigur auszuwählen.</li>
     <li><strong>Spielstand</strong>: Level, Punkte, Münzen, Sterne, geschaffte Runden, im Spiel freigeschaltete virtuelle Gegenstände und die Serie des täglichen Geschenks. Die Münzen sind reine Spielwährung und haben keinen Geldwert.</li>
     <li><strong>Selbst gemalte Bilder</strong> aus dem Mal-Spiel (als Bilddateien auf dem Gerät).</li>
@@ -75,8 +75,9 @@
   </ul>
 
   <h2>6. Löschen der Daten</h2>
-  <p>Wenn Sie die App deinstallieren, werden ihre Daten entfernt. Bleibt auf dem Gerät noch ein Ordner „Baralina“ im Benutzerprofil zurück, können Sie ihn manuell löschen.
-  Damit sind alle Konten, Spielstände und Bilder gelöscht.</p>
+  <p>Beim Deinstallieren der App bleiben die Spielstände auf dem Gerät erhalten, damit ein Update oder eine Neuinstallation den Fortschritt nicht verliert.
+  Um alle Daten zu löschen, deinstallieren Sie die App und löschen Sie anschließend den Ordner „Baralina“ im Ordner <code>%LOCALAPPDATA%</code> Ihres Windows-Benutzerprofils
+  (Windows-Taste + R drücken, <code>%LOCALAPPDATA%\Baralina</code> eingeben und den Ordner löschen). Damit sind alle Konten, Spielstände und Bilder gelöscht.</p>
 
   <h2>7. Ihre Rechte</h2>
   <p>Da wir keine personenbezogenen Daten erhalten oder speichern, liegen alle Daten bei Ihnen auf dem Gerät und Sie können sie jederzeit selbst einsehen und löschen (siehe Punkt 6).
@@ -110,7 +111,7 @@
   <p>تُحفظ المعلومات التالية على الجهاز فقط، كي يحتفظ الطفل بتقدّمه:</p>
   <ul>
     <li><strong>اسم المستخدم</strong> الذي يختاره الطفل بنفسه.</li>
-    <li><strong>كلمة المرور</strong> و<strong>إجابة سؤال الأمان</strong> (اللون المفضل). لا تُحفظ نصًّا صريحًا، بل مشفّرة (PBKDF2 مع ملح عشوائي)، ولا يمكن قراءتها.</li>
+    <li><strong>كلمة المرور</strong> و<strong>إجابة سؤال الأمان</strong> (اللون المفضل). يحفظ التطبيق على الجهاز القيم المشتقة للتحقق منهما، باستخدام خوارزمية PBKDF2 وقيمة عشوائية (ملح) خاصة بكل منهما. إذا أجبت عن سؤال الأمان إجابة صحيحة، يمكنك تعيين كلمة مرور جديدة.</li>
     <li><strong>اختيار «ولد» أو «بنت»</strong>، وذلك فقط لاختيار الشخصية الافتراضية.</li>
     <li><strong>تقدّم اللعب</strong>: المستوى والنقاط والعملات والنجوم والجولات المنجزة والأغراض الافتراضية المفتوحة داخل اللعبة وسلسلة الهدية اليومية. العملات مجرد عملة داخل اللعبة وليس لها قيمة مالية.</li>
     <li><strong>الرسومات التي يلوّنها الطفل</strong> في لعبة التلوين (ملفات صور على الجهاز).</li>
@@ -129,8 +130,9 @@
   </ul>
 
   <h2>6. حذف البيانات</h2>
-  <p>عند إزالة التطبيق من الجهاز تُحذف بياناته. وإن بقي مجلد «Baralina» في ملف المستخدم فيمكنك حذفه يدويًا.
-  بذلك تُحذف جميع الحسابات والتقدّم والرسومات.</p>
+  <p>عند إزالة التطبيق من الجهاز يبقى تقدّم اللعب على الجهاز كي لا يضيع عند التحديث أو إعادة التثبيت.
+  ولحذف كل البيانات: أزل التطبيق، ثم احذف المجلد «Baralina» الموجود داخل المجلد <bdi dir="ltr"><code>%LOCALAPPDATA%</code></bdi> في ملف المستخدم في ويندوز
+  (اضغط زر ويندوز + R، واكتب <bdi dir="ltr"><code>%LOCALAPPDATA%\Baralina</code></bdi>، ثم احذف المجلد). بذلك تُحذف جميع الحسابات والتقدّم والرسومات.</p>
 
   <h2>7. حقوقك</h2>
   <p>بما أننا لا نستلم ولا نحفظ أي بيانات شخصية، فجميع البيانات عندك على الجهاز، ويمكنك الاطلاع عليها وحذفها بنفسك في أي وقت (انظر البند 6).
